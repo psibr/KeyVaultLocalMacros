@@ -14,6 +14,11 @@ variables:
 
 steps:
 - script: dotnet restore
-  displayName: restore
+  displayName: Restore
 - script: dotnet build --configuration $(buildConfiguration) --no-restore
-  displayName: 'build ($(buildConfiguration))'
+  displayName: 'Build - ($(buildConfiguration))'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration) --no-build'
