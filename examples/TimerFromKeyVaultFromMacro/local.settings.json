@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "CronExpression": "@Microsoft.KeyVault(SecretUri=https://psi-macro-demo-kv.vault.azure.net/secrets/Values--CronExpression/fbe973a92f674ce09e9c03d044499243)"
+  }
+}

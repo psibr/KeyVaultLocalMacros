@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros.Tests</AssemblyName>
+
+    <RootNamespace>Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\LocalKeyVaultMacros\KeyVaultLocalMacros.csproj" />
+    <ProjectReference Include="..\..\src\KeyVaultLocalMacros\KeyVaultLocalMacros.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,1 @@
+# Applicaiton Settings KeyVault Macros (Local)
