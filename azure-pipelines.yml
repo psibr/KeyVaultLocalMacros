@@ -15,11 +15,13 @@ variables:
 steps:
 - script: dotnet restore
   displayName: Restore Dependencies
+# Build & Package
 - script: dotnet build --configuration $(buildConfiguration) --no-restore
   displayName: 'Build - ($(buildConfiguration))'
+# Run Tests
 - task: DotNetCoreCLI@2
   displayName: Run Tests
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration) --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+    arguments: '--configuration $(buildConfiguration) --no-build'
