@@ -2,7 +2,9 @@
 
 [![Build Status](https://dev.azure.com/psibrorg/KeyVault%20Local%20Macros/_apis/build/status/psibr.KeyVaultLocalMacros?branchName=master)](https://dev.azure.com/psibrorg/KeyVault%20Local%20Macros/_build/latest?definitionId=6&branchName=master)
 
-Azure KeyVault is a great way to secure your app, but configuring how to read from it takes a tad bit of learning or finding the right packages. Recently Azure exposed a [simplified way of accessing secrets](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references): using macros in the application settings, but there is just one catch: there is no local development experience! **This package bridges that gap by automatically expanding any KeyVault macros found in your configuration.**
+Azure KeyVault is a great way to secure your app, but configuring how to read from it takes a tad bit of learning or finding the right packages. Recently Azure exposed a [simplified way of accessing secrets](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references): using macros in the application settings, but there is just one catch: there is no local development experience! **This package bridges that gap by automatically expanding any KeyVault macros found in your configuration at develop-time.**
+
+> Uses ASPNETCORE_ENVIRONMENT variable to determine if development or not. This is the same behavior as ASP.NET Core.
 
 ## Example for WebJobs 3 & Azure Functions 2
 As always when extending Azure Functions, we need to add a Startup, taking care to include `[assembly: WebJobsStartup(typeof(Startup))]`. In our `Configure`, we just call `builder.TransformKeyVaultMacros<Startup>();` and all configuration values that are KeyVault macros will be resolved.
