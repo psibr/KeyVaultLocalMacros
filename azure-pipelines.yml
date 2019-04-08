@@ -32,3 +32,4 @@ steps:
     contents: '**/*.nupkg' 
     targetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
+- task: PublishBuildArtifacts@1
