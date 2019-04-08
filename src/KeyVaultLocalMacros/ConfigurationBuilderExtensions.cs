@@ -11,34 +11,11 @@ using Microsoft.Azure.KeyVault.Models;
 using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;
 
-namespace Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros
+namespace Psibr.Extensions.AspNetCore.KeyVaultLocalMacros
 {
     public static class ConfigurationBuilderExtensions
     {
         internal static readonly Regex ExtractionRegex = new Regex("(?<=\\@Microsoft\\.KeyVault\\(SecretUri=)[^)]*");
-
-        /// <summary>
-        /// Azure Functions v2 doesn't expose local.settings.json to IConfiguration, so this does it.
-        /// </summary>
-        internal static IConfigurationBuilder AddLocalSettings<TStartup>(this IConfigurationBuilder configurationBuilder)
-            where TStartup : class
-        {
-            var assemblyLocation = new DirectoryInfo(
-                Path.GetDirectoryName(typeof(TStartup).Assembly.Location)
-                    ?? throw new InvalidOperationException("Unable to get directory from Startup assembly location"));
-
-            var configDir = assemblyLocation.Parent;
-
-            if (configDir != null)
-            {
-                configurationBuilder.AddJsonFile(
-                    Path.Combine(
-                        configDir.FullName,
-                        "local.settings.json"), optional: true);
-            }
-
-            return configurationBuilder;
-        }
 
         /// <summary>
         /// Transforms Azure KeyVault macros into their respective values.

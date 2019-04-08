@@ -1,7 +1,8 @@
 ﻿using ExampleFunction;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Hosting;
-using Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros;
+using Microsoft.Extensions.Hosting;
+using Psibr.Extensions.AspNetCore.KeyVaultLocalMacros.WebJobs;
 
 [assembly: WebJobsStartup(typeof(Startup))]
 namespace ExampleFunction

@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Psibr.Extensions.Azure.FunctionsV2.KeyVaultLocalMacros</PackageId>
-    <AssemblyName>Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros</AssemblyName>
-    <RootNamespace>Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros</RootNamespace>
+    <PackageId>Psibr.Extensions.Azure.AspNetCore.KeyVaultLocalMacros</PackageId>
+    <AssemblyName>Psibr.Extensions.AspNetCore.KeyVaultLocalMacros</AssemblyName>
+    <RootNamespace>Psibr.Extensions.AspNetCore.KeyVaultLocalMacros</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.3" />
     <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.0.3" />
-    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
-using Psibr.Extensions.AzureFunctionsV2.KeyVaultLocalMacros;
 using Xunit;
 
-namespace Psibr.Extensions.AzureFunctions.KeyVaultLocalMacros.Tests
+namespace Psibr.Extensions.AspNetCore.KeyVaultLocalMacros.Tests
 {
     public class ConfigurationTests
     {
