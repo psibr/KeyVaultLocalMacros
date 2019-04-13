@@ -2,9 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Psibr.Extensions.Azure.AspNetCore.KeyVaultLocalMacros.WebJobs</PackageId>
+    <PackageId>Psibr.Extensions.AspNetCore.KeyVaultLocalMacros.WebJobs</PackageId>
     <AssemblyName>Psibr.Extensions.AspNetCore.KeyVaultLocalMacros.WebJobs</AssemblyName>
     <RootNamespace>Psibr.Extensions.AspNetCore.KeyVaultLocalMacros.WebJobs</RootNamespace>
+    <Description>
+      Extends WebJobs 3 and Azure Functions 2 to enable transforming Azure KeyVault macros 
+      into their respective values during local development from local.settings.json and other configuration sources.
+    </Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
