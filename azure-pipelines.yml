@@ -25,3 +25,11 @@ steps:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration) --no-build'
+# Copy Packages to Artifact Staging
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: src
+    contents: '**/*.nupkg' 
+    targetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: true
+- task: PublishBuildArtifacts@1
