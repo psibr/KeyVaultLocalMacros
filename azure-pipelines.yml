@@ -29,7 +29,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: src
-    contents: '**/*.nupkg' 
+    contents: '**/*.nupkg;**/*.snupkg;' 
     targetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
 - task: PublishBuildArtifacts@1
